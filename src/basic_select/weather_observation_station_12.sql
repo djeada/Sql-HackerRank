@@ -1,3 +1,3 @@
 SELECT DISTINCT(CITY)
 FROM STATION
-WHERE REGEXP_LIKE(CITY, '^[^aeiou].*[^aeiou]$', 'i');
+WHERE REGEXP_LIKE(CITY, '^[^aeiou].*[^aeiou]$');
