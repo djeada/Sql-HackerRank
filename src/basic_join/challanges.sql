@@ -1,0 +1,51 @@
+SELECT 
+  H.HACKER_ID, H.NAME, COUNT(C.CHALLENGE_ID) 
+AS 
+  NO_OF_CHALLENGES
+FROM 
+  HACKERS H
+JOIN 
+  CHALLENGES C 
+ON 
+  H.HACKER_ID = C.HACKER_ID
+GROUP BY 
+  H.HACKER_ID, H.NAME
+HAVING 
+  NO_OF_CHALLENGES = 
+  (
+  SELECT 
+    COUNT(CHALLENGE_ID) 
+  AS 
+    MAX_COUNT 
+  FROM 
+    CHALLENGES 
+  GROUP BY 
+    HACKER_ID 
+  ORDER BY 
+    MAX_COUNT DESC 
+    LIMIT 1
+  )
+OR 
+  NO_OF_CHALLENGES NOT IN 
+    (
+    SELECT 
+      T.CNT 
+    FROM 
+      (
+      SELECT 
+        COUNT(CHALLENGE_ID) 
+      AS 
+        CNT
+      FROM 
+        CHALLENGES 
+      GROUP BY
+        HACKER_ID
+      ) 
+    T 
+    GROUP BY 
+      T.CNT 
+    HAVING 
+      COUNT(T.CNT) != 1)
+ORDER BY 
+  NO_OF_CHALLENGES DESC, 
+  H.HACKER_ID ASC;
