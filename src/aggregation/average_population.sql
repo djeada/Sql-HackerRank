@@ -1,0 +1,7 @@
+SELECT 
+  FLOOR(
+    AVG(POPULATION)
+  ) 
+FROM 
+  CITY;
+
