@@ -9,4 +9,3 @@ ORDER BY
   EARNINGS DESC 
 LIMIT 
   1;
-

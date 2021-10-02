@@ -6,4 +6,3 @@ SELECT
   ) 
 FROM 
   EMPLOYEES;
-
