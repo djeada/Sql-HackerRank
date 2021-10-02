@@ -116,3 +116,140 @@ Solutions to HackerRank SQL problems.
     </tbody>
 </table>
 
+<h1>Advanced Select</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/what-type-of-triangle/problem">Type of Triangle</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/advanced_select/type_of_triangle.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/the-pads/problem">The PADS</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/advanced_select/the_pads.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/occupations/problem">Occupations</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/advanced_select/occupations.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/binary-search-tree-1/problem">Binary Tree Nodes</a></td>
+            <td><a>sql</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/the-company/problem">New Companies</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/advanced_select/new_companies.sql">sql</a></td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Aggregation</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Solution</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><a href="https://www.hackerrank.com/challenges/revising-aggregations-the-count-function/problem">Revising Aggregations - The Count Function</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/revising_aggregations_the_count_function.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><a href="https://www.hackerrank.com/challenges/revising-aggregations-sum/problem">Revising Aggregations - The Sum Function</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/revising_aggregations_the_sum_function.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><a href="https://www.hackerrank.com/challenges/revising-aggregations-the-average-function/problem">Revising Aggregations - Averages</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/revising_aggregations_averages.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><a href="https://www.hackerrank.com/challenges/average-population/problem">Average Population</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/average_population.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td><a href="https://www.hackerrank.com/challenges/japan-population/problem">Japan Population</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/japan_population.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td><a href="https://www.hackerrank.com/challenges/population-density-difference/problem">Population Density Difference</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/population_density_difference.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td><a href="https://www.hackerrank.com/challenges/the-blunder/problem">The Blunder</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/the_blunder.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td><a href="https://www.hackerrank.com/challenges/earnings-of-employees/problem">Top Earners</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/top_earners.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-2/problem">Weather Observation Station 2</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_2.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-13/problem">Weather Observation Station 13</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_13.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-14/problem">Weather Observation Station 14</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_14.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-15/problem">Weather Observation Station 15</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_15.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-16/problem">Weather Observation Station 16</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_16.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-17/problem">Weather Observation Station 17</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_17.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-18/problem">Weather Observation Station 18</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_18.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>17</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-19/problem">Weather Observation Station 19</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_19.sql">sql</a></td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td><a href="https://www.hackerrank.com/challenges/weather-observation-station-20/problem">Weather Observation Station 20</a></td>
+            <td><a href="https://github.com/djeada/Sql-HackerRank/blob/main/src/aggregation/weather_observation_station_20.sql">sql</a></td>
+        </tr>
+    </tbody>
+</table>
