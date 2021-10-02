@@ -348,7 +348,7 @@ Solutions to HackerRank SQL problems.
 </table>
 
 
-<h1>Advanced Join</h1>
+<h1>Alternative Queries</h1>
 
 <table>
     <thead>
