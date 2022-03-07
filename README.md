@@ -2,7 +2,22 @@
 
 Solutions to HackerRank SQL problems.
  
-<h1>Basic Select</h1>
+## Prerequisites
+ 
+You will need access to a database as well as the MySQL interpreter.
+You may either install them locally or use one of the online interpreters. 
+
+### Installing MySQL locally
+
+There are several methods for installing MySQL directly on your machine.
+I would recommend that you use Docker. 
+
+### Online interpreters
+
+There are several websites that provide online MySQL interpreters that do not require a login or registration.
+This <a href="https://onecompiler.com/mysql">website</a> is one of them. 
+ 
+## Basic Select
 
 <table>
     <thead>
@@ -116,7 +131,7 @@ Solutions to HackerRank SQL problems.
     </tbody>
 </table>
 
-<h1>Advanced Select</h1>
+## Advanced Select
 
 <table>
     <thead>
@@ -155,7 +170,7 @@ Solutions to HackerRank SQL problems.
     </tbody>
 </table>
 
-<h1>Aggregation</h1>
+## Aggregation
 
 <table>
     <thead>
@@ -254,7 +269,7 @@ Solutions to HackerRank SQL problems.
     </tbody>
 </table>
 
-<h1>Basic Join</h1>
+## Basic Join
 
 <table>
     <thead>
@@ -308,7 +323,7 @@ Solutions to HackerRank SQL problems.
     </tbody>
 </table>
 
-<h1>Advanced Join</h1>
+## Advanced Join
 
 <table>
     <thead>
@@ -348,7 +363,7 @@ Solutions to HackerRank SQL problems.
 </table>
 
 
-<h1>Alternative Queries</h1>
+## Alternative Queries
 
 <table>
     <thead>
