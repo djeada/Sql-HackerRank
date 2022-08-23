@@ -1,7 +1,9 @@
 # Sql-HackerRank
 
 Solutions to HackerRank SQL problems.
- 
+
+![Capture](https://user-images.githubusercontent.com/37275728/186156193-5aaef426-955d-4246-9d26-04b14d093f62.PNG)
+
 ## Prerequisites
  
 You will need access to a database as well as the MySQL interpreter.
