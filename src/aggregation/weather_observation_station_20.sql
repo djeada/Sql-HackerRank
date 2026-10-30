@@ -1,22 +1,9 @@
-SET 
-  @ROWINDEX := -1;
-SELECT 
-  ROUND(
-    AVG(T.LAT_N), 
-    4
-  ) 
-FROM 
-  (
-    SELECT 
-      @ROWINDEX := @ROWINDEX + 1 AS ROWINDEX, 
-      S.LAT_N 
-    FROM 
-      STATION AS S 
-    ORDER BY 
-      S.LAT_N
-  ) AS T 
-WHERE 
-  T.ROWINDEX IN (
-    FLOOR(@ROWINDEX / 2), 
-    CEIL(@ROWINDEX / 2)
-  );
+WITH ranked AS (
+    SELECT LAT_N,
+           ROW_NUMBER() OVER (ORDER BY LAT_N) AS ROW_NUM,
+           COUNT(*) OVER () AS ROW_COUNT
+    FROM STATION
+)
+SELECT ROUND(AVG(LAT_N), 4)
+FROM ranked
+WHERE ROW_NUM BETWEEN FLOOR((ROW_COUNT + 1) / 2.0) AND FLOOR((ROW_COUNT + 2) / 2.0);

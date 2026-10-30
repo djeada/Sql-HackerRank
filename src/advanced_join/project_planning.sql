@@ -1,40 +1,14 @@
-SELECT 
-  START_DATE, 
-  MIN(END_DATE) 
-FROM 
-  (
-    SELECT 
-      START_DATE 
-    FROM 
-      PROJECTS 
-    WHERE 
-      START_DATE NOT IN (
-        SELECT 
-          END_DATE 
-        FROM 
-          PROJECTS
-      )
-  ) AS S, 
-  (
-    SELECT 
-      END_DATE 
-    FROM 
-      PROJECTS 
-    WHERE 
-      END_DATE NOT IN (
-        SELECT 
-          START_DATE 
-        FROM 
-          PROJECTS
-      )
-  ) AS E 
-WHERE 
-  START_DATE < END_DATE 
-GROUP BY 
-  START_DATE 
-ORDER BY 
-  DATEDIFF(
-    MIN(END_DATE), 
-    START_DATE
-  ), 
-  START_DATE;
+WITH boundaries AS (
+    SELECT START_DATE, END_DATE,
+           CASE WHEN START_DATE = LAG(END_DATE) OVER (ORDER BY START_DATE)
+                THEN 0 ELSE 1 END AS NEW_PROJECT
+    FROM PROJECTS
+), grouped AS (
+    SELECT START_DATE, END_DATE,
+           SUM(NEW_PROJECT) OVER (ORDER BY START_DATE ROWS UNBOUNDED PRECEDING) AS PROJECT_ID
+    FROM boundaries
+)
+SELECT MIN(START_DATE), MAX(END_DATE)
+FROM grouped
+GROUP BY PROJECT_ID
+ORDER BY COUNT(*), MIN(START_DATE);

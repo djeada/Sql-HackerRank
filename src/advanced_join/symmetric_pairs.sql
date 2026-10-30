@@ -1,38 +1,11 @@
-SELECT 
-  X, 
-  Y 
-FROM 
-  FUNCTIONS F1 
-WHERE 
-  EXISTS(
-    SELECT 
-      * 
-    FROM 
-      FUNCTIONS F2 
-    WHERE 
-      F2.Y = F1.X 
-      AND F2.X = F1.Y 
-      AND F2.X > F1.X
-  ) 
-  AND (X != Y) 
-UNION 
-SELECT 
-  X, 
-  Y 
-FROM 
-  FUNCTIONS F1 
-WHERE 
-  X = Y 
-  AND (
-    (
-      SELECT 
-        COUNT(*) 
-      FROM 
-        FUNCTIONS 
-      WHERE 
-        X = F1.X 
-        AND Y = F1.X
-    ) > 1
-  ) 
-ORDER BY 
-  X;
+SELECT DISTINCT F.X, F.Y
+FROM FUNCTIONS AS F
+WHERE F.X < F.Y
+  AND EXISTS (SELECT 1 FROM FUNCTIONS AS R WHERE R.X = F.Y AND R.Y = F.X)
+UNION
+SELECT X, Y
+FROM FUNCTIONS
+WHERE X = Y
+GROUP BY X, Y
+HAVING COUNT(*) > 1
+ORDER BY X, Y;
