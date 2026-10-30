@@ -1,34 +1,17 @@
-SET 
-  @NUMBER = 1;
-SET 
-  @DIVISOR = 1;
-SELECT 
-  GROUP_CONCAT(N SEPARATOR '&') 
-FROM 
-  (
-    SELECT 
-      @NUMBER := @NUMBER + 1 AS N 
-    FROM 
-      INFORMATION_SCHEMA.TABLES AS T1, 
-      INFORMATION_SCHEMA.TABLES AS T2 
-    LIMIT 
-      1000
-  ) AS N1 
-WHERE 
-  NOT EXISTS(
-    SELECT 
-      * 
-    FROM 
-      (
-        SELECT 
-          @DIVISOR := @DIVISOR + 1 AS D 
-        FROM 
-          INFORMATION_SCHEMA.TABLES AS T3, 
-          INFORMATION_SCHEMA.TABLES AS T4 
-        LIMIT 
-          1000
-      ) AS N2 
-    WHERE 
-      MOD(N, D) = 0 
-      AND N <> D
-  )
+WITH RECURSIVE numbers (N) AS (
+    SELECT 2
+    UNION ALL
+    SELECT N + 1 FROM numbers WHERE N < 1000
+)
+SELECT GROUP_CONCAT(N, '&')
+FROM (
+    SELECT candidate.N
+    FROM numbers AS candidate
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM numbers AS divisor
+        WHERE divisor.N * divisor.N <= candidate.N
+          AND candidate.N % divisor.N = 0
+    )
+    ORDER BY candidate.N
+) AS primes;

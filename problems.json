@@ -1,0 +1,479 @@
+{
+  "source": {
+    "url": "https://www.hackerrank.com/domains/sql",
+    "api_url": "https://www.hackerrank.com/rest/contests/master/tracks/sql/challenges",
+    "checked_on": "2026-10-30",
+    "total": 58
+  },
+  "problems": [
+    {
+      "slug": "revising-the-select-query",
+      "title": "Revising the Select Query I",
+      "category": "basic_select",
+      "solution": "src/basic_select/revising_the_select_query_i.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "revising-the-select-query-2",
+      "title": "Revising the Select Query II",
+      "category": "basic_select",
+      "solution": "src/basic_select/revising_the_select_query_ii.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "select-all-sql",
+      "title": "Select All",
+      "category": "basic_select",
+      "solution": "src/basic_select/select_all.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "select-by-id",
+      "title": "Select By ID",
+      "category": "basic_select",
+      "solution": "src/basic_select/select_by_id.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "japanese-cities-attributes",
+      "title": "Japanese Cities' Attributes",
+      "category": "basic_select",
+      "solution": "src/basic_select/japanese_cities_attributes.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "japanese-cities-name",
+      "title": "Japanese Cities' Names",
+      "category": "basic_select",
+      "solution": "src/basic_select/japanese_cities_names.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-1",
+      "title": "Weather Observation Station 1",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_1.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-3",
+      "title": "Weather Observation Station 3",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_3.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-4",
+      "title": "Weather Observation Station 4",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_4.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-5",
+      "title": "Weather Observation Station 5",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_5.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true,
+      "mysql_solution": "src/mysql/basic_select/weather_observation_station_5.sql"
+    },
+    {
+      "slug": "weather-observation-station-6",
+      "title": "Weather Observation Station 6",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_6.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-7",
+      "title": "Weather Observation Station 7",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_7.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-8",
+      "title": "Weather Observation Station 8",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_8.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-9",
+      "title": "Weather Observation Station 9",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_9.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-10",
+      "title": "Weather Observation Station 10",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_10.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-11",
+      "title": "Weather Observation Station 11",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_11.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "weather-observation-station-12",
+      "title": "Weather Observation Station 12",
+      "category": "basic_select",
+      "solution": "src/basic_select/weather_observation_station_12.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": false
+    },
+    {
+      "slug": "more-than-75-marks",
+      "title": "Higher Than 75 Marks",
+      "category": "basic_select",
+      "solution": "src/basic_select/higher_than_75_marks.sql",
+      "fixture": "fixtures/students.sql",
+      "ordered": true
+    },
+    {
+      "slug": "name-of-employees",
+      "title": "Employee Names",
+      "category": "basic_select",
+      "solution": "src/basic_select/employee_names.sql",
+      "fixture": "fixtures/employee.sql",
+      "ordered": true
+    },
+    {
+      "slug": "salary-of-employees",
+      "title": "Employee Salaries",
+      "category": "basic_select",
+      "solution": "src/basic_select/employee_salaries.sql",
+      "fixture": "fixtures/employee.sql",
+      "ordered": true
+    },
+    {
+      "slug": "what-type-of-triangle",
+      "title": "Type of Triangle",
+      "category": "advanced_select",
+      "solution": "src/advanced_select/type_of_triangle.sql",
+      "fixture": "fixtures/triangles.sql",
+      "ordered": false
+    },
+    {
+      "slug": "the-pads",
+      "title": "The PADS",
+      "category": "advanced_select",
+      "solution": "src/advanced_select/the_pads.sql",
+      "fixture": "fixtures/occupations.sql",
+      "ordered": true,
+      "mysql_solution": "src/mysql/advanced_select/the_pads.sql"
+    },
+    {
+      "slug": "occupations",
+      "title": "Occupations",
+      "category": "advanced_select",
+      "solution": "src/advanced_select/occupations.sql",
+      "fixture": "fixtures/occupations.sql",
+      "ordered": true
+    },
+    {
+      "slug": "binary-search-tree-1",
+      "title": "Binary Tree Nodes",
+      "category": "advanced_select",
+      "solution": "src/advanced_select/binary_tree_nodes.sql",
+      "fixture": "fixtures/binary_tree.sql",
+      "ordered": true
+    },
+    {
+      "slug": "the-company",
+      "title": "New Companies",
+      "category": "advanced_select",
+      "solution": "src/advanced_select/new_companies.sql",
+      "fixture": "fixtures/companies.sql",
+      "ordered": true
+    },
+    {
+      "slug": "revising-aggregations-the-count-function",
+      "title": "Revising Aggregations - The Count Function",
+      "category": "aggregation",
+      "solution": "src/aggregation/revising_aggregations_the_count_function.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "revising-aggregations-sum",
+      "title": "Revising Aggregations - The Sum Function",
+      "category": "aggregation",
+      "solution": "src/aggregation/revising_aggregations_the_sum_function.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "revising-aggregations-the-average-function",
+      "title": "Revising Aggregations - Averages",
+      "category": "aggregation",
+      "solution": "src/aggregation/revising_aggregations_averages.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "average-population",
+      "title": "Average Population",
+      "category": "aggregation",
+      "solution": "src/aggregation/average_population.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "japan-population",
+      "title": "Japan Population",
+      "category": "aggregation",
+      "solution": "src/aggregation/japan_population.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "population-density-difference",
+      "title": "Population Density Difference",
+      "category": "aggregation",
+      "solution": "src/aggregation/population_density_difference.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "the-blunder",
+      "title": "The Blunder",
+      "category": "aggregation",
+      "solution": "src/aggregation/the_blunder.sql",
+      "fixture": "fixtures/employees.sql",
+      "ordered": true
+    },
+    {
+      "slug": "earnings-of-employees",
+      "title": "Top Earners",
+      "category": "aggregation",
+      "solution": "src/aggregation/top_earners.sql",
+      "fixture": "fixtures/employee.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-2",
+      "title": "Weather Observation Station 2",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_2.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-13",
+      "title": "Weather Observation Station 13",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_13.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-14",
+      "title": "Weather Observation Station 14",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_14.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-15",
+      "title": "Weather Observation Station 15",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_15.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-16",
+      "title": "Weather Observation Station 16",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_16.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-17",
+      "title": "Weather Observation Station 17",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_17.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-18",
+      "title": "Weather Observation Station 18",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_18.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-19",
+      "title": "Weather Observation Station 19",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_19.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "weather-observation-station-20",
+      "title": "Weather Observation Station 20",
+      "category": "aggregation",
+      "solution": "src/aggregation/weather_observation_station_20.sql",
+      "fixture": "fixtures/station.sql",
+      "ordered": true
+    },
+    {
+      "slug": "asian-population",
+      "title": "Population Census",
+      "category": "basic_join",
+      "solution": "src/basic_join/population_census.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": true
+    },
+    {
+      "slug": "african-cities",
+      "title": "African Cities",
+      "category": "basic_join",
+      "solution": "src/basic_join/african_cities.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "average-population-of-each-continent",
+      "title": "Average Population of Each Continent",
+      "category": "basic_join",
+      "solution": "src/basic_join/average_population_of_each_continent.sql",
+      "fixture": "fixtures/city.sql",
+      "ordered": false
+    },
+    {
+      "slug": "the-report",
+      "title": "The Report",
+      "category": "basic_join",
+      "solution": "src/basic_join/the_report.sql",
+      "fixture": "fixtures/report.sql",
+      "ordered": true
+    },
+    {
+      "slug": "full-score",
+      "title": "Top Competitors",
+      "category": "basic_join",
+      "solution": "src/basic_join/the_competitors.sql",
+      "fixture": "fixtures/competitors.sql",
+      "ordered": true
+    },
+    {
+      "slug": "harry-potter-and-wands",
+      "title": "Ollivander's Inventory",
+      "category": "basic_join",
+      "solution": "src/basic_join/ollivanders_inventory.sql",
+      "fixture": "fixtures/wands.sql",
+      "ordered": true
+    },
+    {
+      "slug": "challenges",
+      "title": "Challenges",
+      "category": "basic_join",
+      "solution": "src/basic_join/challenges.sql",
+      "fixture": "fixtures/challenges.sql",
+      "ordered": true
+    },
+    {
+      "slug": "contest-leaderboard",
+      "title": "Contest Leaderboard",
+      "category": "basic_join",
+      "solution": "src/basic_join/contest_leaderboard.sql",
+      "fixture": "fixtures/leaderboard.sql",
+      "ordered": true
+    },
+    {
+      "slug": "sql-projects",
+      "title": "SQL Project Planning",
+      "category": "advanced_join",
+      "solution": "src/advanced_join/project_planning.sql",
+      "fixture": "fixtures/projects.sql",
+      "ordered": true
+    },
+    {
+      "slug": "placements",
+      "title": "Placements",
+      "category": "advanced_join",
+      "solution": "src/advanced_join/placement.sql",
+      "fixture": "fixtures/placements.sql",
+      "ordered": true
+    },
+    {
+      "slug": "symmetric-pairs",
+      "title": "Symmetric Pairs",
+      "category": "advanced_join",
+      "solution": "src/advanced_join/symmetric_pairs.sql",
+      "fixture": "fixtures/functions.sql",
+      "ordered": true
+    },
+    {
+      "slug": "interviews",
+      "title": "Interviews",
+      "category": "advanced_join",
+      "solution": "src/advanced_join/interviews.sql",
+      "fixture": "fixtures/interviews.sql",
+      "ordered": true
+    },
+    {
+      "slug": "15-days-of-learning-sql",
+      "title": "15 Days of Learning SQL",
+      "category": "advanced_join",
+      "solution": "src/advanced_join/15_days_of_learning.sql",
+      "fixture": "fixtures/learning.sql",
+      "ordered": true
+    },
+    {
+      "slug": "draw-the-triangle-1",
+      "title": "Draw The Triangle 1",
+      "category": "alternative_queries",
+      "solution": "src/alternative_queries/draw_triangle_1.sql",
+      "fixture": "fixtures/no_tables.sql",
+      "ordered": true,
+      "mysql_solution": "src/mysql/alternative_queries/draw_triangle_1.sql"
+    },
+    {
+      "slug": "draw-the-triangle-2",
+      "title": "Draw The Triangle 2",
+      "category": "alternative_queries",
+      "solution": "src/alternative_queries/draw_triangle_2.sql",
+      "fixture": "fixtures/no_tables.sql",
+      "ordered": true,
+      "mysql_solution": "src/mysql/alternative_queries/draw_triangle_2.sql"
+    },
+    {
+      "slug": "print-prime-numbers",
+      "title": "Print Prime Numbers",
+      "category": "alternative_queries",
+      "solution": "src/alternative_queries/print_prime_numbers.sql",
+      "fixture": "fixtures/no_tables.sql",
+      "ordered": true,
+      "mysql_solution": "src/mysql/alternative_queries/print_prime_numbers.sql"
+    }
+  ]
+}

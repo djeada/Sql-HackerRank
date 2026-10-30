@@ -1,0 +1,214 @@
+[
+  {
+    "name": "single root",
+    "slug": "binary-search-tree-1",
+    "sql": "DELETE FROM BST; INSERT INTO BST VALUES (42, NULL);",
+    "expected": [
+      [
+        [
+          42,
+          "Root"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "odd median",
+    "slug": "weather-observation-station-20",
+    "sql": "DELETE FROM STATION WHERE ID = 12;",
+    "expected": [
+      [
+        [
+          60.1001
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "median with duplicates",
+    "slug": "weather-observation-station-20",
+    "sql": "DELETE FROM STATION; INSERT INTO STATION VALUES (1, 'A', 'AA', 1, 1), (2, 'B', 'BB', 1, 1), (3, 'C', 'CC', 9, 1), (4, 'D', 'DD', 10, 1);",
+    "expected": [
+      [
+        [
+          5
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "single value median",
+    "slug": "weather-observation-station-20",
+    "sql": "DELETE FROM STATION WHERE ID <> 3;",
+    "expected": [
+      [
+        [
+          100.1235
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "no challenges",
+    "slug": "challenges",
+    "sql": "DELETE FROM CHALLENGES;",
+    "expected": [
+      []
+    ]
+  },
+  {
+    "name": "zero leaderboard",
+    "slug": "contest-leaderboard",
+    "sql": "UPDATE SUBMISSIONS SET SCORE = 0;",
+    "expected": [
+      []
+    ]
+  },
+  {
+    "name": "all statistics absent",
+    "slug": "interviews",
+    "sql": "DELETE FROM SUBMISSION_STATS; DELETE FROM VIEW_STATS;",
+    "expected": [
+      []
+    ]
+  },
+  {
+    "name": "zero ongoing streaks",
+    "slug": "15-days-of-learning-sql",
+    "sql": "DELETE FROM SUBMISSIONS WHERE HACKER_ID = 1 AND SUBMISSION_DATE >= '2016-03-02'; DELETE FROM SUBMISSIONS WHERE HACKER_ID = 2 AND SUBMISSION_DATE = '2016-03-03';",
+    "expected": [
+      [
+        [
+          "2016-03-01",
+          2,
+          1,
+          "Ada"
+        ],
+        [
+          "2016-03-02",
+          1,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-03",
+          0,
+          3,
+          "Cara"
+        ],
+        [
+          "2016-03-04",
+          0,
+          3,
+          "Cara"
+        ],
+        [
+          "2016-03-05",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-06",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-07",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-08",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-09",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-10",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-11",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-12",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-13",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-14",
+          0,
+          2,
+          "Bob"
+        ],
+        [
+          "2016-03-15",
+          0,
+          2,
+          "Bob"
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "self pair needs two rows",
+    "slug": "symmetric-pairs",
+    "sql": "DELETE FROM FUNCTIONS; INSERT INTO FUNCTIONS VALUES (1, 1);",
+    "expected": [
+      []
+    ]
+  },
+  {
+    "name": "empty pivot",
+    "slug": "occupations",
+    "sql": "DELETE FROM OCCUPATIONS;",
+    "expected": [
+      []
+    ]
+  },
+  {
+    "name": "exact four-decimal truncation",
+    "slug": "weather-observation-station-13",
+    "sql": "DELETE FROM STATION; INSERT INTO STATION VALUES (1, 'A', 'AA', 38.7895, 1);",
+    "expected": [
+      [
+        [
+          38.7895
+        ]
+      ]
+    ]
+  },
+  {
+    "name": "exact four-decimal truncation",
+    "slug": "weather-observation-station-14",
+    "sql": "DELETE FROM STATION; INSERT INTO STATION VALUES (1, 'A', 'AA', 38.7895, 1);",
+    "expected": [
+      [
+        [
+          38.7895
+        ]
+      ]
+    ]
+  }
+]

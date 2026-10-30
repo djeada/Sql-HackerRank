@@ -1,0 +1,67 @@
+-- Small local test data; running this file again resets these tables.
+
+DROP TABLE IF EXISTS COMPANY;
+CREATE TABLE COMPANY (
+    COMPANY_CODE VARCHAR(10),
+    FOUNDER VARCHAR(50)
+);
+INSERT INTO COMPANY VALUES
+    ('C_2', 'Samantha'),
+    ('C_10', 'Mary'),
+    ('C_1', 'Monika'),
+    ('C_3', 'Zero');
+
+DROP TABLE IF EXISTS LEAD_MANAGER;
+CREATE TABLE LEAD_MANAGER (
+    LEAD_MANAGER_CODE VARCHAR(10),
+    COMPANY_CODE VARCHAR(10)
+);
+INSERT INTO LEAD_MANAGER VALUES
+    ('L1', 'C_1'),
+    ('L1', 'C_1'),
+    ('L2', 'C_1'),
+    ('L3', 'C_2'),
+    ('L4', 'C_10');
+
+DROP TABLE IF EXISTS SENIOR_MANAGER;
+CREATE TABLE SENIOR_MANAGER (
+    SENIOR_MANAGER_CODE VARCHAR(10),
+    LEAD_MANAGER_CODE VARCHAR(10),
+    COMPANY_CODE VARCHAR(10)
+);
+INSERT INTO SENIOR_MANAGER VALUES
+    ('S1', 'L1', 'C_1'),
+    ('S1', 'L1', 'C_1'),
+    ('S2', 'L2', 'C_1'),
+    ('S3', 'L3', 'C_2'),
+    ('S4', 'L4', 'C_10');
+
+DROP TABLE IF EXISTS MANAGER;
+CREATE TABLE MANAGER (
+    MANAGER_CODE VARCHAR(10),
+    SENIOR_MANAGER_CODE VARCHAR(10),
+    LEAD_MANAGER_CODE VARCHAR(10),
+    COMPANY_CODE VARCHAR(10)
+);
+INSERT INTO MANAGER VALUES
+    ('M1', 'S1', 'L1', 'C_1'),
+    ('M1', 'S1', 'L1', 'C_1'),
+    ('M2', 'S2', 'L2', 'C_1'),
+    ('M3', 'S3', 'L3', 'C_2'),
+    ('M4', 'S4', 'L4', 'C_10');
+
+DROP TABLE IF EXISTS EMPLOYEE;
+CREATE TABLE EMPLOYEE (
+    EMPLOYEE_CODE VARCHAR(10),
+    MANAGER_CODE VARCHAR(10),
+    SENIOR_MANAGER_CODE VARCHAR(10),
+    LEAD_MANAGER_CODE VARCHAR(10),
+    COMPANY_CODE VARCHAR(10)
+);
+INSERT INTO EMPLOYEE VALUES
+    ('E1', 'M1', 'S1', 'L1', 'C_1'),
+    ('E1', 'M1', 'S1', 'L1', 'C_1'),
+    ('E2', 'M1', 'S1', 'L1', 'C_1'),
+    ('E3', 'M2', 'S2', 'L2', 'C_1'),
+    ('E4', 'M3', 'S3', 'L3', 'C_2'),
+    ('E5', 'M4', 'S4', 'L4', 'C_10');

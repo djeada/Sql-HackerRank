@@ -1,76 +1,27 @@
-SELECT 
-  T2.SUBMISSION_DATE, 
-  T2.HACKER_CNT, 
-  H.HACKER_ID, 
-  H.NAME 
-FROM 
-  (
-    SELECT 
-      SUBMISSION_DATE, 
-      COUNT(DISTINCT HACKER_ID) AS HACKER_CNT 
-    FROM 
-      (
-        SELECT 
-          S1.SUBMISSION_DATE, 
-          S1.HACKER_ID, 
-          COUNT(DISTINCT S2.SUBMISSION_DATE) AS DAY_CNT 
-        FROM 
-          SUBMISSIONS S1 
-          JOIN SUBMISSIONS S2 ON S2.HACKER_ID = S1.HACKER_ID 
-          AND S2.SUBMISSION_DATE <= S1.SUBMISSION_DATE 
-        GROUP BY 
-          S1.SUBMISSION_DATE, 
-          S1.HACKER_ID
-      ) T4 
-    WHERE 
-      DATEDIFF(SUBMISSION_DATE, '2016-03-01') + 1 = DAY_CNT 
-    GROUP BY 
-      SUBMISSION_DATE
-  ) T2 
-  JOIN (
-    SELECT 
-      SUBMISSION_DATE, 
-      HACKER_ID 
-    FROM 
-      (
-        SELECT 
-          SUBMISSION_DATE, 
-          HACKER_ID, 
-          COUNT(*) AS CNT 
-        FROM 
-          SUBMISSIONS 
-        GROUP BY 
-          SUBMISSION_DATE, 
-          HACKER_ID
-      ) T 
-    WHERE 
-      NOT EXISTS (
-        SELECT 
-          1 
-        FROM 
-          (
-            SELECT 
-              SUBMISSION_DATE, 
-              HACKER_ID, 
-              COUNT(*) AS CNT 
-            FROM 
-              SUBMISSIONS 
-            GROUP BY 
-              SUBMISSION_DATE, 
-              HACKER_ID
-          ) T1 
-        WHERE 
-          T1.SUBMISSION_DATE = T.SUBMISSION_DATE 
-          AND T1.HACKER_ID <> T.HACKER_ID 
-          AND (
-            T1.CNT > T.CNT 
-            OR (
-              T1.CNT = T.CNT 
-              AND T1.HACKER_ID < T.HACKER_ID
-            )
-          )
-      )
-  ) T3 ON T3.SUBMISSION_DATE = T2.SUBMISSION_DATE 
-  JOIN HACKERS H ON H.HACKER_ID = T3.HACKER_ID 
-ORDER BY 
-  T2.SUBMISSION_DATE;
+WITH daily AS (
+    SELECT SUBMISSION_DATE, HACKER_ID, COUNT(*) AS SUBMISSION_COUNT
+    FROM SUBMISSIONS
+    WHERE SUBMISSION_DATE BETWEEN '2016-03-01' AND '2016-03-15'
+    GROUP BY SUBMISSION_DATE, HACKER_ID
+), ranked AS (
+    SELECT SUBMISSION_DATE, HACKER_ID,
+           ROW_NUMBER() OVER (PARTITION BY HACKER_ID ORDER BY SUBMISSION_DATE) AS ACTIVE_DAYS,
+           ROW_NUMBER() OVER (
+               PARTITION BY SUBMISSION_DATE
+               ORDER BY SUBMISSION_COUNT DESC, HACKER_ID
+           ) AS DAILY_RANK
+    FROM daily
+), participation AS (
+    -- The contest starts on March 1, so the day of the month is the required streak length.
+    SELECT SUBMISSION_DATE,
+           SUM(CASE WHEN ACTIVE_DAYS = CAST(SUBSTR(SUBMISSION_DATE, 9, 2) AS DECIMAL(2, 0))
+                    THEN 1 ELSE 0 END) AS CONSISTENT_HACKERS
+    FROM ranked
+    GROUP BY SUBMISSION_DATE
+)
+SELECT R.SUBMISSION_DATE, P.CONSISTENT_HACKERS, R.HACKER_ID, H.NAME
+FROM ranked AS R
+JOIN participation AS P ON P.SUBMISSION_DATE = R.SUBMISSION_DATE
+JOIN HACKERS AS H ON H.HACKER_ID = R.HACKER_ID
+WHERE R.DAILY_RANK = 1
+ORDER BY R.SUBMISSION_DATE;
